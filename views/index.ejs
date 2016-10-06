@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html ng-app="overflow">
+
+<head>
+  <title>Stack Overflow</title>
+  <meta charset="utf-8">
+  <base href="/" />
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/ngApp/css/site.css"/>
+  <script src="https://use.fontawesome.com/9983e60038.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-default">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#" class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>StackExchange</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+      </ul>
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search Q&A">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">help <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a>Hi</li>
+            <li><a href="#">Another action</a>boies</li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+  <div class="container" id='stack'>
+    <div class="row">
+        <div class="col-sm-5">
+            <a href="/"><img src="http://devlup.com/wp-content/uploads/2011/06/stackoverflow.png" alt="" /></a>
+        </div>
+
+        <div class="col-sm-7" id='navBut'>
+            <button class='btn-a'><a class='nav' href="/">Questions</a></button>
+            <button class='btn-a'><a class='nav' href="/">Jobs</a></button>
+            <button class='btn-a'><a class='nav' href="/">Documentation</a></button>
+            <button class='btn-a'><a class='nav' href="/">Tags</a></button>
+            <button class='btn-a'><a class='nav' href="/">Users</a></button>
+            <button class='btn-a'><a class='nav' href="/">Badges</a></button>
+            <button class='btn-a'><a class='nav' href="/askQuestion">AskQuestion</a></button>
+        </div>
+    </div>
+
+
+
+        <ui-view></ui-view>
+  </div>
+
+  <nav class='navbar navbar-inverse navbar-static-bottom'>
+      <div class="containter-fluid">
+          <div class='row'>
+             <div class="col-md-12" style='text-align: center'>
+                 <a class='footer' href="http://stackoverflow.com/company/about">about us</a> /
+                 <a class='footer' href="http://stackoverflow.com/tour">contact</a> /
+                 <a class='footer' href="http://stackoverflow.com/tour">tour</a> /
+                 <a class='footer' href="http://stackoverflow.com/help">help</a> /
+                 <a class='footer' href="http://chat.stackoverflow.com/">chat</a> /
+                 <a class='footer' href="http://stackexchange.com/legal">legal</a> /
+                 <a class='footer' href="http://stackexchange.com/legal/privacy-policy">privacy policy</a> /
+                 <a class='footer' href="http://stackoverflow.com/company/work-here">work here</a> /
+                 <a class='footer' href="https://business.stackoverflow.com/advertise">advertising info</a> /
+                 <a class='footer' href="http://meta.stackoverflow.com/">feedback</a> /
+                 <a class='footer' href="http://blog.stackoverflow.com/?blb=1">blog</a> /
+                 <a class='footer' href="http://stackexchange.com/legal">legal</a> /
+                 <a class='footer' href="http://stackoverflow.com/company/work-here?__=803068001">mobile</a> /
+             </div>
+          </div>
+
+      </div>
+  </nav>
+
+  <script src="/bower_components/angular/angular.min.js"></script>
+  <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="/bower_components/angular-resource/angular-resource.min.js"></script>
+  <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="/bower_components/angular-touch/angular-touch.min.js"></script>
+  <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script src="/bower_components/angular-timeago/dist/angular-timeago.js" charset="utf-8"></script>
+
+  <script src="/ngApp/app.js"></script>
+  <!-- controllers -->
+  <script src="/ngApp/controllers/controllers.js"></script>
+  <script src="/ngApp/controllers/questionControllers.js" charset="utf-8"></script>
+  <script src="/ngApp/controllers/questionDetailsControllers.js" charset="utf-8"></script>
+  <script src="/ngApp/controllers/askQuestionController.js" charset="utf-8"></script>
+  <script src="/ngApp/controllers/editQuestionController.js" charset="utf-8"></script>
+  <!-- services -->
+  <script src="/ngApp/services/services.js"></script>
+  <script src="/ngApp/services/questionServices.js" charset="utf-8"></script>
+
+</body>
+
+</html>

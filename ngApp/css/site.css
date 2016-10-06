@@ -1,0 +1,126 @@
+/*#main {
+    border: solid black;
+}*/
+#data {
+    padding-top: 50px;
+}
+
+button.btn-a {
+    background-color: #B0B0B0;
+    padding: 7px;
+    font-size: 17px;
+}
+
+button.btn-a:hover {
+    background-color: #ffa500;
+}
+#signIn {
+    border-style: solid 0.5px;
+    border-color: lightgray;
+    background-color: #FFFDFB;
+}
+
+#info {
+    border-style: solid 0.5px;
+    border-color: lightgray;
+}
+
+.fa {
+
+    padding-left: 26px;
+}
+
+#navBut {
+    padding-top: 53px;
+}
+
+#howToAsk {
+    margin-top: -30px;
+    border: 2px solid lightgray;
+    background-color: #FAECC9;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-bottom: 20px;
+}
+
+#howtoEdit {
+    margin-top: -30px;
+    border: 2px solid lightgray;
+    background-color: #FAECC9;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-bottom: 20px;
+}
+
+#askForm {
+    padding-top: 50px;
+}
+
+#textArea {
+    margin-top: 40px;
+    margin-left: -12px;
+}
+
+#postQuestionBtn {
+    margin-top: 40px;
+}
+
+#tag {
+    padding-top: 100px;
+}
+
+a.nav:link, a.nav:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a.nav:hover, a.nav:active {
+    text-decoration: none;
+}
+
+#stack {
+    padding-top: 10px;
+    padding-bot: 20px;
+}
+
+#status {
+    padding-bottom: 20px;
+}
+
+#footer {
+    background-color: black;
+    color: white;
+}
+
+#pic {
+    margin-right: 5px;
+}
+
+#featured {
+    border: 2px solid lightgray;
+    background-color: #FAECC9;
+    margin-bottom: 14px;
+}
+
+ul.editList {
+    list-style-type: square;
+}
+
+a.footer {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+a.footer:link, a.class:visited {
+    color: #C0D9D9;
+}
+
+a.footer:hover, a.class:active {
+    text-decoration: none;
+    color: #5F9F9F;
+}
+
+/*.class {
+    padding-top: 33px;
+    padding-left: 40px;;
+}*/

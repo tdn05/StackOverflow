@@ -1,0 +1,171 @@
+<div class="row">
+    <div class="col-md-11" id='signIn'>
+        <p>
+            Stack Overflow is a community of 4.7 million programmers, just like you,
+            helping each other. Join them, it only takes a minute
+        </p>
+    </div>
+    <div class="col-md-1" id='info'>
+        <button type="button" class='btn btn-sm btn-default'>Sign up here</button>
+    </div>
+
+    <hr>
+
+    <div class="col-md-1">
+        <!-- <a href="#">
+            <i class="fa fa-star-o" aria-hidden="true" style='text-align: center'></i>
+        </a> -->
+        <br>
+        <i class="fa fa-caret-up fa-2x" aria-hidden="true" style='text-align: center' ng-click='vm.addVote()'></i>
+        <p>
+            <h4 class='votes' style='text-align: center'>{{vm.question.votes}}</h4>
+        </p>
+        <i class="fa fa-caret-down fa-2x" aria-hidden="true" style='text-align: center' ng-click='vm.minusVote()'></i>
+
+    </div>
+    <div class="col-md-8">
+        <table class='table'>
+            <tr>
+                <td>
+                    <h2>{{vm.question.title}}</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Question:
+                    {{vm.question.question}}
+                </td>
+            </tr>
+            <tr >
+                <td style='text-align: right'>
+                    <h6><a href="#">{{vm.question.name}}</a></h6>
+                    <h6>{{vm.question.timeCreate | timeAgo: "MM/dd/yy"}}</h6>
+                </td>
+            </tr>
+        </table>
+
+        <p>
+            <a href="#">share</a> <a href="/editQuestion/{{vm.question._id}}">edit</a>
+        </p>
+        <hr>
+
+        <div>
+            <h3>Answers</h3>
+            <table class='table'>
+                <tr ng-repeat='c in vm.question.comments'>
+                    <td>
+                        Answer:
+                        {{c.message}}
+                    </td>
+                    <td style='text-align: right'>
+                        <h6><a href="#">{{c.name}}</a></h6>
+                        <h6>{{c.timeCreate | timeAgo}}</h6>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <form ng-submit='vm.saveComment()'>
+            <div class='form-group'>
+                <div class="col-md-13">
+                    <h4>Your Answer:</h4>
+                    <textarea name="Answer" rows="10" cols="104"ng-model='vm.comment.message'></textarea>
+                    <hr>
+                    <button type="submit" class='btn btn-md btn-primary'>Post Your Answer</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="col-md-3" id="status">
+        <p>
+            asked {{vm.question.timeCreate |timeAgo}}
+        </p>
+        <p>
+            views
+        </p>
+        <p>
+            active today
+        </p>
+
+        <hr>
+
+        <div>
+            <h4>Hot Network Questions</h4>
+            <div>
+                <h6>The biggest artificial cloud ever made</h6>
+            </div>
+            <div>
+                <h6>Was Gandalf meant to confront the Balrog?</h6>
+            </div>
+            <div>
+                <h6>DalyProgammer 284: Wandering Fingers</h6>
+            </div>
+            <div>
+                <h6>Data Normalization</h6>
+            </div>
+            <div>
+                <h6>Can one be "taste blind" to the sweetness of stevia?</h6>
+            </div>
+            <div>
+                <h6>why do we not require websites to have several independent certi</h6>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3" id='featured'>
+        <h6>FEATURED ON META</h6>
+        <div class="col-md-2" >
+            <p id='pic'>
+                <i class="fa fa-square-o" aria-hidden="true"></i>
+            </p>
+        </div>
+        <div class="col-md-10">
+            <a href="http://meta.stackexchange.com/questions/284996/we-have-updated-jquery-to-1-12-4-please-report-related-bugs-here?cb=1"><p>
+                We have updated jQuery to 1.12.4- please report related bugs here
+            </p></a>
+        </div>
+        <div class="col-md-2">
+            <p id='pic'>
+                <i class="fa fa-stack-overflow" aria-hidden="true"></i>
+            </p>
+        </div>
+        <div class="col-md-10">
+            <a href="http://meta.stackoverflow.com/questions/334404/documentation-update-september-12th?cb=1"><p>
+                Documentation Update, September 12th
+            </p></a>
+        </div>
+        <div class="col-md-2">
+            <p>
+                <i class="fa fa-stack-overflow" aria-hidden="true"></i>
+            </p>
+        </div>
+        <div class="col-md-10">
+            <a href="http://meta.stackoverflow.com/questions/334551/documentation-reputation-update-is-live?cb=1"><p>
+                Documentation Reputation Update Is Live
+            </p></a>
+        </div>
+        <h6>HOT META POSTS</h6>
+        <div class="col-md-2">
+            <p class='meta'>
+                37
+            </p>
+        </div>
+        <div class="col-md-10">
+            <a href="http://meta.stackoverflow.com/questions/335327/can-we-stop-title-edits-to-this-php-canonical-question?cb=1"><p>
+                Can we stop title edits to this PHP canonical question?
+            </p></a>
+        </div>
+        <div class="col-md-2">
+            <p class='meta'>
+                36
+            </p>
+        </div>
+        <div class="col-md-10">
+            <a href="http://meta.stackoverflow.com/questions/335386/how-should-i-introduce-my-students-to-stack-overflow?cb=1"><p>
+                How should I introduce my students to Stack Overflow?
+            </p></a>
+        </div>
+    </div>
